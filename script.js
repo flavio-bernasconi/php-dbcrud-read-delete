@@ -3,7 +3,7 @@ $(document).ready(init);
 
 function getPagamenti(){
 
-  resetDiv();
+  // resetDiv()
 
   $.ajax({
       url : "api.php",
@@ -13,7 +13,7 @@ function getPagamenti(){
 
       for (var i = 0; i < data.length; i++) {
         var d = data[i];
-        console.log(d);
+        // console.log(d);
 
         var source = $("#template").html();
         var template = Handlebars.compile(source);
@@ -53,8 +53,12 @@ function getPagamenti(){
 function deletePagamento(){
   var box = $(this).parent();
   var idPagamento = box.data('id');
+  var nonni = $(this).parentsUntil(".container");
+
+  console.log(box);
 
   // console.log(idPagamento);
+  $(nonni).html("");
 
   $.ajax({
     url : 'api-delete.php',
@@ -70,17 +74,8 @@ function deletePagamento(){
   })
 
 
-
-
-
 }
 
-
-
-
-function resetDiv(){
-  $(".container > div").html("");
-}
 
 
 //AGGIUNGI LE FUNZIONI

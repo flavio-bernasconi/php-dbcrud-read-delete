@@ -30,13 +30,13 @@
   <body>
     <h1>pagamenti</h1>
     <div class="container">
-      <div id="pagamenti-pending">
+      <div class="box-pagamenti" id="pagamenti-pending">
 
       </div>
-      <div id="pagamenti-accepted">
+      <div class="box-pagamenti" id="pagamenti-accepted">
 
       </div>
-      <div id="pagamenti-rejected">
+      <div class="box-pagamenti" id="pagamenti-rejected">
 
       </div>
     </div>
