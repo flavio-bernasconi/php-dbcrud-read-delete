@@ -28,16 +28,26 @@
 
   </head>
   <body>
-    <h1>pagamenti</h1>
-    <div class="container">
-      <div class="box-pagamenti" id="pagamenti-pending">
+    <div class="wrapper">
+      <div class="container">
+        <h1>pending</h1>
+        <div class="box-pagamenti" id="pagamenti-pending">
 
+        </div>
       </div>
-      <div class="box-pagamenti" id="pagamenti-accepted">
 
+      <div class="container">
+        <h1>accepted</h1>
+        <div class="box-pagamenti" id="pagamenti-accepted">
+
+        </div>
       </div>
-      <div class="box-pagamenti" id="pagamenti-rejected">
 
+      <div class="container">
+        <h1>rejected</h1>
+        <div class="box-pagamenti" id="pagamenti-rejected">
+
+        </div>
       </div>
     </div>
 

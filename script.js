@@ -53,7 +53,7 @@ function getPagamenti(){
 function deletePagamento(){
   var box = $(this).parent();
   var idPagamento = box.data('id');
-  var nonni = $(this).parentsUntil(".container");
+  var nonni = $(".box-pagamenti");
 
   console.log(box);
 
