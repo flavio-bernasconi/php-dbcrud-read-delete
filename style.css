@@ -6,15 +6,18 @@ body{
   padding:0;
   font-family: 'Montserrat', sans-serif;
   padding:50px;
+  color: rgb(47, 47, 47);
 }
 .wrapper{
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   flex-wrap: wrap;
 }
 .container .box-pagamenti{
-  margin: 15px;
-  padding:25px;
+  margin: 15px 0;
+  padding-right: 20px;
+  height: 80vh;
+  overflow-y: scroll;
   /* width: 100%;
   display: flex;
   overflow-x: auto;
@@ -22,26 +25,94 @@ body{
 }
 .container h1{
   text-transform: capitalize;
+  text-align: left;
 }
+#pagamenti-accepted .pagamento .line{
+  width: 100%;
+  height: 12px;
+  background: green;
+  position: absolute;
+  top:0;
+  left:0;
+  transition: 0.5s;
+}
+/* #pagamenti-accepted .pagamento:hover .line{
+  width: 100%;
+} */
+
+#pagamenti-pending .pagamento .line{
+  width: 100%;
+  height: 12px;
+  background: orange;
+  position: absolute;
+  top:0;
+  left:0;
+  transition: 0.5s;
+}
+/* #pagamenti-pending .pagamento:hover .line{
+  width: 100%;
+} */
+
+#pagamenti-rejected .pagamento .line{
+  width: 100%;
+  height: 12px;
+  background: black;
+  position: absolute;
+  top:0;
+  left:0;
+  transition: 0.5s;
+}
+/* #pagamenti-rejected .pagamento:hover .line{
+  width: 100%;
+} */
+
 .pagamento{
-  margin: 15px;
+  margin: 20px 0;
   border: solid 1px rgb(218, 218, 218);
   padding:25px;
   transition: .4s;
   min-width: 300px;
   height: 200px;
   box-shadow: 2px 2px 6px rgb(195, 195, 195, 0.2);
+  position: relative;
+
 }
-.dettagli{
+.pagamento .dettagli{
   margin-top: 30px;
+}
+.dettagli .cifra-price{
+  color: rgb(47, 47, 47);
+  font-size: 4rem;
+  margin:0;
+  font-weight: bolder;
+}
+.dettagli .text-price{
+  color: rgb(47, 47, 47);
+  font-size: 1.5rem;
+  margin:10px 0;
+}
+.dettagli .num-id{
+  position: absolute;
+  font-size: 1.4rem;
+  font-weight: lighter;
+  color: rgb(199, 199, 199);
+  bottom: 0;
+  right: 30px;
 }
 .btn-delete{
   float: right;
   text-transform: capitalize;
   text-decoration: none;
+  color: rgb(199, 199, 199);
+  font-weight: bolder;
+  transition: 0.3s;
 }
+.btn-delete:hover{
+  color: rgb(47, 47, 47);
+  cursor: pointer;
+}
+
 .pagamento:hover{
   transform: translateY(-10px);
-  cursor: pointer;
-  box-shadow: 2px 2px 6px rgb(195, 195, 195);
+  box-shadow: 2px 2px 12px rgb(195, 195, 195);
 }

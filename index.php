@@ -30,15 +30,15 @@
   <body>
     <div class="wrapper">
       <div class="container">
-        <h1>pending</h1>
-        <div class="box-pagamenti" id="pagamenti-pending">
+        <h1>accepted</h1>
+        <div class="box-pagamenti" id="pagamenti-accepted">
 
         </div>
       </div>
 
       <div class="container">
-        <h1>accepted</h1>
-        <div class="box-pagamenti" id="pagamenti-accepted">
+        <h1>pending</h1>
+        <div class="box-pagamenti" id="pagamenti-pending">
 
         </div>
       </div>
@@ -56,11 +56,15 @@
 
     <script id="template" type="text/x-handlebars-template">
           <div class="pagamento" data-id="{{id}}">
-            <a href="#" class="btn-delete">delete</a>
+            <div class="line"></div>
+            <a href="#" class="btn-delete">X</a>
             <div class="dettagli">
-              <p>{{id}}</p>
-              <h3>Prezzo : {{price}}</h3>
-              <p>prenotazione : {{prenotazione_id}}</p>
+              <!-- <p>{{id}}</p> -->
+              <p class="text-price">Price :</p>
+              <h3 class="cifra-price"> {{price}}</h3>
+              <p class="num-id">{{id}}</p>
+              <!-- <p>prenotazione : {{prenotazione_id}}</p> -->
+              <p></p>
             </div>
           </div>
     </script>
